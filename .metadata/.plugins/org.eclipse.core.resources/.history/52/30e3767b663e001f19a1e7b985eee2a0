@@ -1,0 +1,36 @@
+package demo_java;
+
+
+class Hotel {
+    private String name;
+    private int rating;
+    private int weekdayRegularRate;
+    private int weekendRegularRate;
+    private int weekdayRewardRate;
+    private int weekendRewardRate;
+
+    public Hotel(String name, int rating, int weekdayRegularRate, int weekendRegularRate, int weekdayRewardRate, int weekendRewardRate) {
+        this.name = name;
+        this.rating = rating;
+        this.weekdayRegularRate = weekdayRegularRate * 5;
+        this.weekendRegularRate = weekendRegularRate * 2;
+        this.weekdayRewardRate = weekdayRewardRate * 5;
+        this.weekendRewardRate = weekendRewardRate * 2;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public int calculateCost(int weekdays, int weekends) {
+        int cost = 0;
+        cost = weekdayRegularRate + weekendRegularRate + weekdayRewardRate + weekendRewardRate;
+        System.out.println(cost);
+        return cost;
+    }
+}
+

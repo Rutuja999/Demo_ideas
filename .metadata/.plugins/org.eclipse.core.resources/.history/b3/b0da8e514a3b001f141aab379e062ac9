@@ -1,0 +1,23 @@
+package demo_java;
+
+public class C {
+    public void getSB (StringBuffer a, StringBuffer b) {
+        a.append ("B");
+        a = b;
+    }
+    public static void func(int n) {
+    	if(n>10)
+    		if(n>20)
+    			System.out.println("A");
+    		else
+    			System.out.println("B");
+    }
+    public static void main (String args [ ] ) {
+//        C c = new C();
+//        StringBuffer a = new StringBuffer ("A");
+//        StringBuffer b = new StringBuffer ("B");
+//        c.getSB(a, b);
+//        System.out.print(a);
+    	func(15);
+    }
+}
